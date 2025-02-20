@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import useAxios from "../../Auth/Hook/useAxios";
+import useAxiosSecure from "../../Auth/Hook/useAxiosSecure";
 import useAuth from "../../Auth/Hook/useAuth";
 
 
 const PrivateInfo = () => {
-    // useAxios Hook
-    const axiosInstance = useAxios();
+    // useAxiosSecure Hook
+    const axiosInstance = useAxiosSecure();
     // useContenxt 
     const {users} = useAuth();
     const email = users?.email;

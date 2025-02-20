@@ -7,7 +7,7 @@ const instance = axios.create({
   baseURL: "http://localhost:5000",
   withCredentials: true,
 });
-const useAxios = () => {
+const useAxiosSecure = () => {
   // useContext
   const { logout } = useAuth();
   // useNavigate
@@ -37,4 +37,4 @@ const useAxios = () => {
   return instance;
 };
 
-export default useAxios;
+export default useAxiosSecure;

@@ -6,8 +6,11 @@ import { toast } from "react-toastify";
 import Lottie from "lottie-react";
 import registerLottie from "../../Lottie/register.json";
 import useAuth from "../../Auth/Hook/useAuth";
+import useAxiosPublic from "../../Auth/Hook/useAxiosPublic";
 
 const Register = () => {
+    // useHook for axiosPublic
+    const axiosPublic = useAxiosPublic();
   // useContent
   const { register, profile, setUsers, google } = useAuth();
   // state for password
@@ -47,8 +50,15 @@ const Register = () => {
         profile({ displayName: name, photoURL: photo })
           .then(() => {
             setUsers({ ...result.user, displayName: name, photoURL: photo });
-            toast.success("Sign Up Successfully");
-            navigate(location?.state ? location.state : "/");
+
+            // create user in Database
+            const user = { name, email };
+            axiosPublic.post("/users", user).then((res) => {
+              if (res.data.insertedId) {
+                toast.success("Sign Up Successfully");
+                navigate(location?.state ? location.state : "/");
+              }
+            });
           })
           .catch((error) => toast.error(error.message));
       })
@@ -61,8 +71,17 @@ const Register = () => {
     google(googleProvider)
       .then((result) => {
         setUsers(result.user);
-        toast.success("Sign Up Successfully");
-        navigate(location?.state ? location.state : "/");
+
+        // create user in Database
+        const user = {
+          name: result.user.displayName,
+          email: result.user.email,
+        };
+        axiosPublic.post("/users", user).then((res) => {
+          console.log(res.data);
+          toast.success("Sign Up Successfully");
+          navigate(location?.state ? location.state : "/");
+        });
       })
       .catch((error) => toast.error(error.message));
   };
