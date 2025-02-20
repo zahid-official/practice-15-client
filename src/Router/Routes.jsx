@@ -4,7 +4,6 @@ import Error from "../Pages/Error/Error";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRouter from "./PrivateRouter";
-import PrivateInfo from "../Pages/Private/PrivateInfo";
 
 const Routes = createBrowserRouter([
   {
@@ -14,40 +13,9 @@ const Routes = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <h1>Home Page</h1>,
+        element: <PrivateRouter><h1>Home Page</h1></PrivateRouter>,
       },
-      {
-        path: "/route2",
-        element: (
-          <PrivateRouter>
-            <h1>Route2 Page</h1>
-          </PrivateRouter>
-        ),
-      },
-      {
-        path: "/route3",
-        element: (
-          <PrivateRouter>
-            <h1>Route3 Page</h1>
-          </PrivateRouter>
-        ),
-      },
-      {
-        path: "/route4",
-        element: (
-          <PrivateRouter>
-            <h1>Route4 Page</h1>
-          </PrivateRouter>
-        ),
-      },
-      {
-        path: "/privateInfo",
-        element: (
-          <PrivateRouter>
-            <PrivateInfo></PrivateInfo>,
-          </PrivateRouter>
-        ),
-      },
+      
       {
         path: "/login",
         element: <Login></Login>,

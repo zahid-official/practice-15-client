@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import useAuth from "../Auth/Hook/useAuth";
 
@@ -26,43 +26,6 @@ const Navbar = () => {
     theme === "dark" && document.documentElement.classList.add("dark");
   }, []);
 
-  const links = (
-    <>
-      <li className="text-lg font-bold">
-        <NavLink to={"/"} className={'dark:hover:bg-slate-800'}>Home</NavLink>
-      </li>
-      <li className="text-lg font-bold">
-        <NavLink to={"/route2"} className={'dark:hover:bg-slate-800'}>Route2</NavLink>
-      </li>
-      <li className="text-lg font-bold">
-        <NavLink to={"/route3"} className={'dark:hover:bg-slate-800'}>Route3</NavLink>
-      </li>
-      <li className="text-lg font-bold">
-        <NavLink to={"/route4"} className={'dark:hover:bg-slate-800'}>Route4</NavLink>
-      </li>
-      <li className="text-lg font-bold">
-        <NavLink to={"/privateInfo"} className={'dark:hover:bg-slate-800'}>Private Info</NavLink>
-      </li>
-
-      {users?.email ? (
-        ""
-      ) : (
-        <>
-          <div className="divider divider-start sm:hidden m-0"></div>
-          <li className="text-lg font-bold sm:hidden">
-            <NavLink to={"/login"} className={'dark:hover:bg-slate-800'}>
-              <span>Sign In</span>
-            </NavLink>
-          </li>
-          <li className="text-lg font-bold sm:hidden">
-            <NavLink to={"/register"} className={'dark:hover:bg-slate-800'}>
-              <span>Sign Up</span>
-            </NavLink>
-          </li>
-        </>
-      )}
-    </>
-  );
 
   return (
     <>
@@ -70,13 +33,8 @@ const Navbar = () => {
         {/* start */}
         <div className="navbar-start">
           <Link to={"/"}>
-            <h2 className="text-4xl font-bold">Logo</h2>
+            <h2 className="text-4xl font-bold">Clearify</h2>
           </Link>
-        </div>
-
-        {/* center */}
-        <div className="navbar-center hidden xl:flex">
-          <ul className="menu menu-horizontal px-1 gap-2">{links}</ul>
         </div>
 
         {/* end */}
@@ -137,46 +95,8 @@ const Navbar = () => {
               </div>
             </div>
           ) : (
-            <div className="sm:flex gap-2.5 hidden">
-              <Link to={"/login"}>
-                <button className="btn bg-[#010313] dark:bg-base-200 dark:text-black dark:hover:bg-base-300 hover:bg-[#161f2c] text-white text-lg font-bold min-w-28">
-                  Sign In
-                </button>
-              </Link>
-
-              <Link to={"/register"}>
-                <button className="btn bg-[#010313] dark:bg-base-200 dark:text-black dark:hover:bg-base-300 hover:bg-[#161f2c] text-white text-lg font-bold min-w-28">
-                  Sign Up
-                </button>
-              </Link>
-            </div>
+            ""
           )}
-
-          <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-7 w-7"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h8m-8 6h16"
-                />
-              </svg>
-            </div>
-
-            <ul
-              tabIndex={0}
-              className="z-20 dark:bg-[#0a1020] right-2 py-4 menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow gap-2"
-            >
-              {links}
-            </ul>
-          </div>
         </div>
       </div>
     </>
