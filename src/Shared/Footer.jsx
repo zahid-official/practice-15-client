@@ -11,10 +11,10 @@ const Footer = () => {
       <footer className="footer lg:justify-around py-20 text-base px-10 relative ">
         <aside>
           <div className="flex items-center gap-2">
-            <h1 className="text-4xl font-bold">Logo</h1>
+            <h1 className="text-4xl font-bold">Clearify</h1>
           </div>
           <p>
-            Logo Industries Ltd.
+            Clearify Industries Ltd.
             <br />
             Providing reliable tech since 2015
           </p>
@@ -72,12 +72,12 @@ const Footer = () => {
             
             Address: +7811 Vermont Ave, <br /> Los Angeles, CA 90054
           </a>
-          <a className="link link-hover">Mail Us: hello@logo.com</a>
+          <a className="link link-hover">Mail Us: hello@Clearify.com</a>
         </nav>
       </footer>
 
       <div className="py-7 px-5 text-lg font-semibold text-center border-t-2">
-        <p>Copyright © {currentYear} - Logo is Proudly Owned by Zahidul Islam</p> 
+        <p>Copyright © {currentYear} - Clearify is Proudly Owned by Zahidul Islam</p> 
       </div>
     </>
   );
