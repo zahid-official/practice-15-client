@@ -46,7 +46,7 @@ Clearify is a modern, minimalistic task management app built with **React** and 
 
 ## Live Links
 
-- **Live View**: [Clearify Live Demo](https://your-frontend-live-link.com)
+- **Live View**: [Clearify Live Demo](https://clearify-official.vercel.app)
 - **Github Repo**: [Repository](https://github.com/zahid-official/practice-15-client)
 
 ## Thank You
