@@ -1,3 +1,4 @@
+import Progress from "./Progress";
 import ToDo from "./ToDo";
 
 const Home = () => {
@@ -9,10 +10,10 @@ const Home = () => {
           <ToDo></ToDo>
 
           {/* inProgress */}
-          <div className="bg-base-200 px-6 py-6 rounded-lg">b</div>
+          <Progress></Progress>
 
           {/* taskComplated */}
-          <div className="bg-base-200 px-6 py-6 rounded-lg">c</div>
+          <div className="bg-base-200 px-6 py-6 rounded-lg">b</div>
         </div>
       </div>
     </>

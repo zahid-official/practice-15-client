@@ -6,14 +6,14 @@ import useAxiosPublic from "../../Auth/Hook/useAxiosPublic";
 import { FaPlus } from "react-icons/fa6";
 import { ImCross } from "react-icons/im";
 import useAuth from "../../Auth/Hook/useAuth";
-import TaskTodo from "./TaskTodo";
+import TaskProgress from "./TaskProgress";
 
-const ToDo = () => {
+const Progress = () => {
   // useHooks
   const axiosPublic = useAxiosPublic();
   const { users } = useAuth();
   const email = users?.email;
-  const category = "To-Do";
+  const category = "Progress";
 
   // state for showField
   const [showField, setShowField] = useState(false);
@@ -23,13 +23,11 @@ const ToDo = () => {
     queryKey: ["tasks", category],
     queryFn: async () => {
       const res = await axiosPublic.get(
-        `/tasksTodo?email=${email}&category=${category}`
+        `/tasksProgress?email=${email}&category=${category}`
       );
       return res.data;
     },
   });
-
-  console.log(tasks);
 
   // handleSubmit
   const handleSubmit = (event) => {
@@ -58,11 +56,15 @@ const ToDo = () => {
   return (
     <>
       <div className=" bg-gray-300 dark:bg-slate-900 px-6 pt-12 pb-14 rounded-lg">
-        <h2 className="pl-3 font-bold text-2xl pb-3">To-Do</h2>
+        <h2 className="pl-3 font-bold text-2xl pb-3">In Progress</h2>
 
         {/* all task based on category */}
         {tasks?.map((task) => (
-          <TaskTodo key={task._id} task={task} refetch={refetch}></TaskTodo>
+          <TaskProgress
+            key={task._id}
+            task={task}
+            refetch={refetch}
+          ></TaskProgress>
         ))}
 
         {/* new task */}
@@ -75,7 +77,9 @@ const ToDo = () => {
                 maxLength={50}
                 onChange={(e) => {
                   if (e.target.value.length >= 50) {
-                    toast.warning("You can only enter a maximum of 50 characters.");
+                    toast.warning(
+                      "You can only enter a maximum of 50 characters."
+                    );
                   }
                 }}
                 placeholder="Enter a Title"
@@ -112,4 +116,4 @@ const ToDo = () => {
   );
 };
 
-export default ToDo;
+export default Progress;
