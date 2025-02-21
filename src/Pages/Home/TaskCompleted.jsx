@@ -6,7 +6,7 @@ import { IoMdDoneAll } from "react-icons/io";
 import { toast } from "react-toastify";
 import useAxiosPublic from "../../Auth/Hook/useAxiosPublic";
 
-const TaskProgress = ({ task, refetch }) => {
+const TaskCompleted = ({ task, refetch }) => {
   const { _id: id, title: taskTitle } = task || {};
 
   // useHooks
@@ -33,7 +33,6 @@ const TaskProgress = ({ task, refetch }) => {
       }
     });
   };
-
   return (
     <>
       <div className="my-4">
@@ -84,4 +83,4 @@ const TaskProgress = ({ task, refetch }) => {
   );
 };
 
-export default TaskProgress;
+export default TaskCompleted;
