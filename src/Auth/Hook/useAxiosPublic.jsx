@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-  baseURL: "http://localhost:5000",
+  baseURL: "https://clearify-server.vercel.app",
+  withCredentials: true, // <--- Important for cookies
 });
 
 const useAxiosPublic = () => {

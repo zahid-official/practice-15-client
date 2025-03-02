@@ -71,7 +71,7 @@ const Navbar = () => {
 
           {users?.email ? (
             <div className="relative rounded-full profilePhoto">
-              <div className="dropdown dropdown-hover  rounded-full">
+              <div className="dropdown dropdown-hover rounded-full">
                 <div tabIndex={0} role="button" className="rounded-full m-1">
                   
                   <img
@@ -81,7 +81,7 @@ const Navbar = () => {
                 />
                 </div>
                 
-                <ul tabIndex={0} className="dropdown-content menu bg-base-100 dark:bg-[#0a1020] rounded-box z-30 w-44 px-2 py-5 border dark:border-none text-center text-base font-bold space-y-3 -right-14">
+                <ul tabIndex={0} className="dropdown-content menu bg-base-100 dark:bg-[#0a1020] rounded-box z-30 w-44 px-2 py-5 border dark:border-none text-center text-base font-bold space-y-3 -right-0">
                 <li className="px-3 border-b pb-4">{users?.displayName}</li>
                 <li className="px-3">
                   <button

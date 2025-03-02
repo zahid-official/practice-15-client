@@ -59,7 +59,7 @@ const AuthProvider = ({ children }) => {
       if (email) {
         axios
           .post(
-            "http://localhost:5000/jwt",
+            "https://clearify-server.vercel.app/jwt",
             { email },
             { withCredentials: true }
           )
@@ -70,7 +70,7 @@ const AuthProvider = ({ children }) => {
       } 
       else {
         axios
-          .post("http://localhost:5000/jwtRemove", {}, { withCredentials: true })
+          .post("https://clearify-server.vercel.app/jwtRemove", {}, { withCredentials: true })
           .then((res) => {
             console.log(res.data);
             setLoading(false);
