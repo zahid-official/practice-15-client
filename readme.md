@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✨ Clearify - Modern Task Management Application
+# 🌟 Clearify - Modern Task Management Application
 
 ### _Organize, Prioritize and Achieve with Seamless Task Management_
 
