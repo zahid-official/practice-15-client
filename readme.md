@@ -2,7 +2,7 @@
 
 # ✨ Clearify - Modern Task Management Application
 
-### _Organize, Prioritize, and Achieve with Seamless Task Management_
+### _Organize, Prioritize and Achieve with Seamless Task Management_
 
 [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -20,7 +20,7 @@
 
 ## 📋 Overview
 
-**Clearify** is a feature-rich, modern task management application designed to boost productivity and streamline workflow organization. Built with cutting-edge technologies like React and Vite.js, Clearify offers an intuitive drag-and-drop interface, real-time synchronization, and responsive design that adapts seamlessly across desktop, tablet, and mobile devices. Whether you're managing personal tasks or coordinating team projects, Clearify provides the tools you need to stay organized and focused.
+**Clearify** is a feature-rich, modern task management application designed to boost productivity and streamline workflow organization. Built with cutting-edge technologies like React and Vite.js, Clearify offers an intuitive drag-and-drop interface, real-time synchronization and responsive design that adapts seamlessly across desktop, tablet and mobile devices. Whether you're managing personal tasks or coordinating team projects, Clearify provides the tools you need to stay organized and focused.
 
 ---
 
@@ -37,7 +37,7 @@
 
 ### 🎨 User Experience
 
-- **Responsive Design** - Fully optimized layout for mobile, tablet, and desktop devices
+- **Responsive Design** - Fully optimized layout for mobile, tablet and desktop devices
 - **Modern UI/UX** - Clean, minimalist interface with smooth transitions and animations
 - **Dark Mode Support** - Eye-friendly theme options for comfortable viewing
 - **Interactive Components** - Dynamic task cards with hover effects and visual feedback
@@ -105,7 +105,7 @@
 ### Task Management System
 
 #### **Create Tasks**
-- Add new tasks with title, description, and priority
+- Add new tasks with title, description and priority
 - Set due dates and assign categories
 - Rich text support for task descriptions
 - Duplicate existing tasks for quick creation
@@ -212,7 +212,7 @@ clearify-client/
 
 ### What Makes Clearify Special
 
-1. **Modern React Patterns** - Hooks, Context API, and functional components for clean, maintainable code
+1. **Modern React Patterns** - Hooks, Context API and functional components for clean, maintainable code
 
 2. **Drag-and-Drop Excellence** - Smooth, intuitive task reordering with visual feedback and animations
 
@@ -300,7 +300,7 @@ VITE_WS_URL=wss://your-websocket-server.com
 - **Secure Auth** - Firebase authentication with protected routes
 - **Responsive Design** - Seamless experience across all devices
 - **Production Ready** - Deployed on Vercel with CI/CD pipeline
-- **Clean Code** - ESLint, Prettier, and best practices followed
+- **Clean Code** - ESLint, Prettier and best practices followed
 
 ---
 
@@ -308,12 +308,12 @@ VITE_WS_URL=wss://your-websocket-server.com
 
 This project demonstrates proficiency in:
 
-**React Development** - Hooks, Context API, and component architecture  
+**React Development** - Hooks, Context API and component architecture  
 **State Management** - Global and local state handling patterns  
 **Authentication** - Firebase integration and protected routing  
 **API Integration** - Axios for HTTP requests and WebSocket for real-time data  
 **Responsive Design** - Tailwind CSS and mobile-first approach  
-**Performance** - Code splitting, lazy loading, and optimization techniques  
+**Performance** - Code splitting, lazy loading and optimization techniques  
 **Deployment** - Vercel hosting and environment configuration  
 
 ---
